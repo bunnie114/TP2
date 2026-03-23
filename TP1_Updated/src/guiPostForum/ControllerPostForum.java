@@ -14,12 +14,20 @@ import entityClasses.PostList;
  * Each method is short by design — a controller method should either delegate to
  * a model/database method or navigate to another View.  If a method grows large,
  * that is a sign that logic belongs in a model or helper class instead. </p>
- *
- * <p> Copyright: CSE 360 Team Project © 2025 </p>
+ * 
+ * <p> The operations performed by this class include all CRUD operations for posts,
+ * search and filter operations, and navigation operations. This class supports student
+ * user stories since this class allows students to post questions and statements, lets 
+ * students see a list of posts that others have made that might be important to them, 
+ * allows students to delete their posts, allows students to post to different threads, 
+ * lets students search for posts with keywords, and shows students a list of their posts. </p>
+ * 
+ *  <p> Copyright: CSE 360 Team Project © 2026 </p>
  *
  * @author Team
- * @version 1.00  2025-02-25  Initial version for HW2
+ * @version 1.01  2026-03-22  Updated version for TP2
  */
+
 public class ControllerPostForum {
 
     // Shared reference to the forum database (set up by applicationMain)
