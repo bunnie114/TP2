@@ -10,25 +10,31 @@ import java.util.stream.Collectors;
  * <p> Description: An in-memory ordered collection of Post objects.  This class is used
  * in two ways:
  *
- *   1.  As the "all posts" master list — populated once from the database and kept in
- *       sync whenever the user creates, updates, or deletes a post.
+ * <p>  1. As the "all posts" master list — populated once from the database and kept in
+ *       sync whenever the user creates, updates, or deletes a post. </p>
  *
- *   2.  As a search-result subset — a PostList whose size can be 0, 1, or many, built
- *       by the filter methods below and handed to the View for display.
+ * <p> 2.  As a search-result subset — a PostList whose size can be determined by
+ *       by the filter methods below and handed to the View for display. </p>
  *
  * Using the same class for both purposes keeps the View code uniform: it always works
- * with a PostList regardless of whether it is showing everything or just search results.
+ * with a PostList regardless of whether it is showing everything or only search results.
  * An alternative would have been separate "AllPosts" and "SearchResults" classes, but
- * that would duplicate every display method for no real benefit.
+ * that would unnecessarily duplicate every display method. This class supports 
+ * searching for posts, creating posts, updating posts, deleting posts, and filtering
+ * posts. This class supports student user stories by supporting students posting statements
+ * and questions, allowing students to see a list of posts that may be related to a topic important
+ * to them, allowing students to see a list of their posts, showing students that match specified key words,
+ * and letting students delete their posts.
  *
- * No database logic lives here; persistence is handled entirely by the Database class.
+ * No database logic is used in this class. Persistence is handled entirely by the Database class.
  * PostList is purely an in-memory model. </p>
  *
- * <p> Copyright: CSE 360 Team Project © 2025 </p>
+ * <p> Copyright: CSE 360 Team Project © 2026 </p>
  *
  * @author Team
- * @version 1.00  2025-02-25  Initial version for HW2
+ * @version 1.00  2026-03-22  Updated version for TP2
  */
+
 public class PostList {
 
     // -----------------------------------------------------------------------
