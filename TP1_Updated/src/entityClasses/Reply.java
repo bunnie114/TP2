@@ -5,24 +5,30 @@ import java.time.LocalDateTime;
 /*******
  * <p> Title: Reply Class. </p>
  *
- * <p> Description: Represents a single reply to a forum Post.  In Ed Discussion terms,
- * this is one answer or follow-up comment attached to a thread.
+ * <p> Description: Represents a single reply to a forum Post.  In Ed Discussion,
+ * this is one answer or follow-up comment attached to a thread. </p>
  *
- * A Reply belongs to exactly one Post (via postId) and is authored by one user.
+ * <p> A Reply belongs to only one Post (via postId) and is authored by one user.
  * Instructors can mark their reply as an "instructor answer", which lets students
- * quickly identify official responses — mirroring the green check mark on Ed Discussion.
+ * quickly identify official responses — mirroring the green check mark on Ed Discussion. </p>
  *
- * Why a separate class from Post: Posts and Replies share some fields (author, body,
- * timestamp) but have different semantics.  A Reply is always subordinate to a Post and
+ * <p> Why a separate class from Post: Posts and Replies share some fields (author, body,
+ * time stamp) but have different semantics.  A Reply is always subordinate to a Post and
  * cannot exist without one.  Keeping them as distinct classes makes that ownership
  * relationship explicit in the type system and avoids nullable "parentId" hacks in a
  * single combined class. </p>
+ * 
+ * <p> The operations supported by this class include creating, reading, and updating posts. 
+ * This class also distinguishes students responses from instructor responses. Student user 
+ * stories are supported by this class since this class allows students to receive replies to their
+ * posts.</p>
  *
- * <p> Copyright: CSE 360 Team Project © 2025 </p>
+ * <p> Copyright: CSE 360 Team Project © 2026 </p>
  *
  * @author Team
- * @version 1.00  2025-02-25  Initial version for HW2
+ * @version 1.01  2026-03-22  Updated version for TP2
  */
+
 public class Reply {
 
     // -----------------------------------------------------------------------
