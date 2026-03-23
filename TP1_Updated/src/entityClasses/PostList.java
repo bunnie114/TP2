@@ -32,7 +32,7 @@ import java.util.stream.Collectors;
  * <p> Copyright: CSE 360 Team Project © 2026 </p>
  *
  * @author Team
- * @version 1.00  2026-03-22  Updated version for TP2
+ * @version 1.01  2026-03-22  Updated version for TP2
  */
 
 public class PostList {
