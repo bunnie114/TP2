@@ -22,21 +22,29 @@ import java.util.List;
  * ListView, a search bar, a category filter, and buttons to Create, View/Reply,
  * Edit, and Delete the selected post.
  *
- * Layout follows the same three-area pattern as the rest of the application:
- *   Area 1 — page header and logged-in user
- *   Area 2 — search bar, category filter, post ListView, action buttons
- *   Area 3 — Back and Quit
+ * <p> Layout follows the same three-area pattern as the rest of the application: </p>
+ * <p> Area 1 — page header and logged-in user </p>
+ * <p> Area 2 — search bar, category filter, post ListView, action buttons </p>
+ * <p> Area 3 — Back and Quit </p>
  *
- * Why a ListView instead of a TableView: A ListView is simpler to style and
+ * <p> Why a ListView instead of a TableView: A ListView is simpler to style and
  * sufficient for forum browsing.  TableView would only add value if the user
  * needed to sort by multiple columns simultaneously, which is not a current
  * requirement. </p>
  *
- * <p> Copyright: CSE 360 Team Project © 2025 </p>
+ * <p> This class performs read operations for posts, performs navigation operations
+ * and sets up the UI for users that are logged in. This class also helps set up the
+ * operations needed for searching and filtering. This class supports the student user 
+ * stories since it allows students to see a list of their posts, helps students see
+ * a list of posts from others that match specified keywords, and helps students search
+ * for posts using keywords. </p>
+ *
+ * <p> Copyright: CSE 360 Team Project © 2026 </p>
  *
  * @author Team
- * @version 1.00  2025-02-25  Initial version for HW2
+ * @version 1.01  2026-03-22  Updated version for TP2
  */
+
 public class ViewPostForum {
 
     // -----------------------------------------------------------------------
