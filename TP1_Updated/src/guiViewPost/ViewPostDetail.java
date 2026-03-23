@@ -21,8 +21,8 @@ import java.util.List;
  * <p> Title: ViewPostDetail Class. </p>
  *
  * <p> Description: Displays the full content of a single Post together with all of its
- * Replies.  Users can write a new reply, edit or delete their own replies, and mark
- * the post as resolved.
+ * Replies.  Users can write a new reply, edit or delete their own replies, read all replies,
+ *  and mark the post as resolved.
  *
  * The post body is shown in a read-only TextArea at the top.  Below it, replies are
  * listed in a ListView.  A reply composition TextArea sits at the bottom.
@@ -30,12 +30,18 @@ import java.util.List;
  * Instructor replies are visually distinguished by a "[Instructor]" prefix in the
  * ListView so students can immediately identify official answers — mirroring
  * Ed Discussion's green checkmark convention. </p>
+ * 
+ * <p> In addition to supporting CRUD operations for replies, this class also supports
+ *  filtering operations and returns error messages. This class supports student user 
+ *  stories since it allows students to receive replies, see which posts have replies, and 
+ *  the number of replies that each post has. </p>
  *
- * <p> Copyright: CSE 360 Team Project © 2025 </p>
+ * <p> Copyright: CSE 360 Team Project © 2026 </p>
  *
  * @author Team
- * @version 1.00  2025-02-25  Initial version for HW2
+ * @version 1.01  2026-03-22  Updated version for TP2
  */
+
 public class ViewPostDetail {
 
     private static double width  = applicationMain.FoundationsMain.WINDOW_WIDTH;
