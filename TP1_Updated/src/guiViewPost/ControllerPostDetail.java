@@ -14,11 +14,17 @@ import entityClasses.ReplyList;
  * the database or entity layer, and uses the View only for navigation and error
  * display. </p>
  *
- * <p> Copyright: CSE 360 Team Project © 2025 </p>
+ * <p> In addition to Reply CRUD operations, this class also handles navigation 
+ * operations and handles resolving posts. This class supports the student user 
+ * stories since it allows students to receive replies, see which posts have 
+ * replies, and see the number of replies a post has. </p>
+ * 
+ * <p> Copyright: CSE 360 Team Project © 2026 </p>
  *
  * @author Team
- * @version 1.00  2025-02-25  Initial version for HW2
+ * @version 1.01  2026-03-22  Updated version for TP2
  */
+
 public class ControllerPostDetail {
 
 	private static ForumDatabase db = applicationMain.FoundationsMain.forumDatabase;
