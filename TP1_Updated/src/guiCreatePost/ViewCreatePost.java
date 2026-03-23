@@ -14,23 +14,29 @@ import javafx.stage.Stage;
 /*******
  * <p> Title: ViewCreatePost Class. </p>
  *
- * <p> Description: A form page used for BOTH creating a new post and editing an
+ * <p> Description: A form page used for creating a new post and editing an
  * existing one.  When an existing Post is passed to displayCreatePost(), the form
  * fields are pre-populated and the save button is labelled "Update Post"; otherwise
  * it says "Create Post".
  *
  * Reusing one View for two operations (create vs. edit) reduces code duplication.
- * The alternative — separate ViewCreatePost and ViewEditPost classes — would be
- * nearly identical and twice as hard to maintain.
+ * Separate ViewCreatePost and ViewEditPost classes would be nearly identical and 
+ * significantly more difficult to maintain.
  *
  * Input validation error messages are shown in a red label beneath the form rather
  * than via popup dialogs, which is less disruptive for the user. </p>
  *
- * <p> Copyright: CSE 360 Team Project © 2025 </p>
+ * <p> This class supports operations that create new posts and update existing posts.
+ * This class also provides error messages for invalid input. Student user stories are 
+ * supported by this class since this class allows students to post statements and questions
+ * to benefit from the insight and ideas of others.  </p>
+ *
+ * <p> Copyright: CSE 360 Team Project © 2026 </p>
  *
  * @author Team
- * @version 1.00  2025-02-25  Initial version for HW2
+ * @version 1.01  2026-03-22  Updated version for TP2
  */
+
 public class ViewCreatePost {
 
     // -----------------------------------------------------------------------
