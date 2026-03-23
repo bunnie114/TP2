@@ -8,10 +8,13 @@ import java.time.LocalDateTime;
  * <p> Description: Represents a single forum post (question/thread) created by a student.
  * A Post contains all the information a student would submit when asking a question,
  * analogous to a thread on Ed Discussion.  Each post has a unique integer ID, an author
- * (username), a title, a body, a category tag, a resolved flag, a timestamp, and a
- * view-count.
+ * (username), a title, a body, a category tag, a resolved flag, a time stamp, and a 
+ * view-count. The CRUD operations supported by this class are create, read, and update. 
+ * This supports the student user stories by supporting students posting statements and questions, 
+ * supporting students posting to different threads, and restricting a student's ability to create,
+ *  delete, or edit posts.  </p>
  *
- * Why this design: We keep Post as a plain data-carrying entity (no database logic here)
+ * <p> Why this design: We keep Post as a plain data-carrying entity (no database logic here)
  * so that the Database class remains the single place where persistence decisions are
  * made.  That separation makes unit-testing the data model straightforward — we can
  * create, read, update, and inspect Post objects without needing a live database. </p>
@@ -19,8 +22,9 @@ import java.time.LocalDateTime;
  * <p> Copyright: CSE 360 Team Project © 2025 </p>
  *
  * @author Team
- * @version 1.00  2025-02-25  Initial version for HW2
+ * @version 1.00  2026-03-22  Updated version for TP2
  */
+
 public class Post {
 
     // -----------------------------------------------------------------------
