@@ -12,12 +12,18 @@ import entityClasses.Post;
  * The save action decides at runtime whether to call createPost or updatePost by
  * checking ViewCreatePost.editingPost: null means create; non-null means update.
  * This avoids having two nearly identical controller methods. </p>
- *
- * <p> Copyright: CSE 360 Team Project © 2025 </p>
+ * 
+ * <p> The operations supported by this class are create and update operations. This class
+ * also returns errors when a students attempts to make an invalid post. Student users are 
+ * supported by this class by allowing students to post to different threads and by allowing 
+ * students to post statements and questions.  </p>
+ * 
+ * <p> Copyright: CSE 360 Team Project © 2026 </p>
  *
  * @author Team
- * @version 1.00  2025-02-25  Initial version for HW2
+ * @version 1.01  2026-03-22  Updated version for TP2
  */
+
 public class ControllerCreatePost {
 
 	private static ForumDatabase db = applicationMain.FoundationsMain.forumDatabase;
