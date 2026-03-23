@@ -7,23 +7,29 @@ import java.util.List;
  * <p> Title: ReplyList Class. </p>
  *
  * <p> Description: An in-memory ordered collection of Reply objects.  Like PostList,
- * this class serves a dual purpose:
+ * this class serves a dual purpose: </p>
  *
- *   1.  The master list of every reply across all posts (populated from the database).
- *   2.  A subset list returned by filter operations (e.g., all replies for one post,
- *       or only instructor answers).
+ *<p>   1.  The master list of every reply across all posts (populated from the database). </p>
+ *<p>    2.  A subset list returned by filter operations (e.g., all replies for one post,
+ *       or only instructor answers). </p>
  *
- * Having one class handle both roles eliminates the need for a separate
- * "SinglePostReplies" wrapper that would otherwise duplicate all the iteration logic.
+ *<p>  Having one class handle both roles eliminates the need for a separate
+ * "SinglePostReplies" wrapper that would duplicate all the iteration logic.
  *
  * Replies are stored in insertion order, which corresponds to chronological order
  * because the database returns them ORDER BY timestamp. </p>
+ * 
+ * <p> The operations supported by this class are operations to create, update, and delete replies. 
+ * This class also supports operations to search for posts and filter them by keywords or by if the 
+ * author is an instructor or not. This class also supports Student User Stories since it allows students
+ * to view the number of replies on a post and receive replies on their posts.   </p>
  *
- * <p> Copyright: CSE 360 Team Project © 2025 </p>
+ * <p> Copyright: CSE 360 Team Project © 2026 </p>
  *
  * @author Team
- * @version 1.00  2025-02-25  Initial version for HW2
+ * @version 1.01  2026-03-22  Updated version for TP2
  */
+
 public class ReplyList {
 
     // -----------------------------------------------------------------------
