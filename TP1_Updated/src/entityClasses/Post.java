@@ -32,7 +32,7 @@ public class Post {
     // -----------------------------------------------------------------------
 
     /**********
-     * <p> Variable: postID </p>
+     * <p> Attribute: int postID </p>
      * 
      * <p> Description: Unique identifier assigned by the database (auto-increment). Used
      * by the Post class to easily identify posts to facilitate CRUD operations. </p>
@@ -41,7 +41,7 @@ public class Post {
     private int postId;
 
     /**********
-     * <p> Variable: author </p>
+     * <p> Attribute: String author </p>
      * 
      * <p> Description: Username of the student who created this post. Used
      * by the Post class to identify the author of a post, manage user settings,
@@ -50,7 +50,7 @@ public class Post {
     private String author;
 
     /**********
-     * <p> Variable: title </p>
+     * <p> Attribute: String title </p>
      * 
      * <p> Description: Short, descriptive headline for the question or statement posted 
      * (is required to not be a blank value for a post to be made). Used by the Post class
@@ -59,7 +59,7 @@ public class Post {
     private String title;
 
     /**********
-     * <p> Variable: body </p>
+     * <p> Attribute: String body </p>
      * 
      * <p> Description: Is the full question or statement text for a post(is required to 
      * not be a blank value for a post to be made). Used by the Post class to get the body 
@@ -68,7 +68,7 @@ public class Post {
     private String body;
 
     /**********
-     * <p> Variable: category </p>
+     * <p> Attribute: String category </p>
      * 
      * <p> Description: Captures the broad topic tag, e.g. "Homework", "Exam", "Project"
      * , "General". Defaults to "General" when not supplied so that every post always has
@@ -79,7 +79,7 @@ public class Post {
     private String category;
 
     /**********
-     * <p> Variable: resolved </p>
+     * <p> Attribute: boolean resolved </p>
      * 
      * <p> Description: Used by post class to keep track of if a post is resolved or not.
      * Is true once an instructor or the original author marks the post resolved. Kept separate
@@ -88,7 +88,7 @@ public class Post {
     private boolean resolved;
 
     /**********
-     * <p> Variable: timestamp </p>
+     * <p> Attribute: LocalDateTime timestamp </p>
      * 
      * <p> Description: Is the wall-clock time when the post was first saved.
      *  Used by the post class to get the first saved time of a post to show 
@@ -97,7 +97,7 @@ public class Post {
     private LocalDateTime timestamp;
 
     /**********
-     * <p> Variable: viewCount </p>
+     * <p> Attribute: int viewCount </p>
      * 
      * <p> Description: Is the running count of how many times a post has been 
      * opened. Used by the post class to track the views on a post to show users
@@ -190,7 +190,7 @@ public class Post {
      * We return a String rather than throwing an exception so the caller (View or
      * Controller) can display the message directly in the GUI without a try/catch. </p>
      * 
-     * <p> This method satisfies the input vaildation requirement for posts and supports 
+     * <p> This method satisfies the input validation requirement for posts and supports 
      * student user stories by making sure students post valid questions and statements and
      * by making sure that a student posts to a specific thread. </p>
      *
@@ -222,7 +222,9 @@ public class Post {
      * <p> Description: Is a getter method for the postID of a given post.</p>
      * 
      * <p> This method helps satisfies the CRUD operations requirement for posts by
-     * getting the characteristic that makes posts uniquely identifiable. </p>
+     * getting the characteristic that makes posts uniquely identifiable. The student user 
+     * stories are supported by this method since it allows students to post statements and questions, 
+     * helps students search for posts with keywords, and allows them to delete their own posts. </p>
      *
      * @return postID    database primary key
      */
@@ -235,7 +237,10 @@ public class Post {
      * set the postID of a given post. This is the source of the attribute postID.</p>
      * 
      * <p> This method helps satisfies the CRUD operations requirement for posts by
-     * making posts uniquely identifiable. </p>
+     * setting posts with a unique ID to make them uniquely identifiable. The student user 
+     * stories are supported by this method since it allows students to post statements and 
+     * questions, helps students search for posts with keywords, and allows them to delete 
+     * their own posts. </p>
      *
      * @param postID    database primary key
      */
@@ -332,7 +337,7 @@ public class Post {
      * to them in real time. Students can also update and create posts, which are two of the required CRUD
      *  operations. </p>
      *
-     * @return body   full question text
+     * @param body   full question text
      */
     public void   setBody(String body)     { this.body = body; }
 
@@ -366,7 +371,7 @@ public class Post {
      * getting a necessary input for creating posts. This method also allows students to view changes made to a post 
      * that may be important to them and satisfies the user story of students posting to different threads. </p>
      *
-     * @return category  topic tag
+     * @param category  topic tag
      */
     public void   setCategory(String category) { this.category = category; }
 
@@ -396,7 +401,7 @@ public class Post {
      * <p> Description: Is a getter method for the timestamp used to update the post with the
      * time it was first posted. </p>
      * 
-     * @param timestamp original creation timestamp from the stored row
+     * @return timestamp original creation timestamp from the stored row
      */
     public LocalDateTime getTimestamp() { return timestamp; }
     
